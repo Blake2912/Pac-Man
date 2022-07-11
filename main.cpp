@@ -1,9 +1,21 @@
 #include<ctype.h>
-#include<GLUT/glut.h>
 #include<math.h>
 #include<stdio.h>
 #define false 0
 #define true 1
+
+#if _WIN32
+#   include <Windows.h>
+#endif
+#if __APPLE__
+#   include <OpenGL/gl.h>
+#   include <OpenGL/glu.h>
+#   include <GLUT/glut.h>
+#else
+#   include <GL/gl.h>
+#   include <GL/glu.h>
+#   include <GL/glut.h>
+#endif
 
 const int BOARD_X = 31;
 const int BOARD_Y = 28;
